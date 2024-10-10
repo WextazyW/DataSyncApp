@@ -7,7 +7,6 @@
     tools:context=".screens.start.StartFragment"
     android:background="@color/white">
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_start"
         android:layout_width="match_parent"

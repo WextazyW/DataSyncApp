@@ -13,9 +13,9 @@ import com.example.currencyrate.model.nal.NalItem
 
 class StartAdapter : RecyclerView.Adapter<StartAdapter.StartViewHolder>(){
 
-    var listStart = emptyList<NalItem>()
+    private var listStart = emptyList<NalItem>()
 
-    class StartViewHolder(view : View) : RecyclerView.ViewHolder(view)
+    class StartViewHolder(view : View) : ViewHolder(view)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StartViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_money_layout, parent, false)
