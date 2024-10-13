@@ -9,9 +9,9 @@ import retrofit2.http.GET
 
 interface ApiService {
 
-    @GET("api/Books\n")
+    @GET("api/Reader\n")
     suspend fun getNalMoney() : Response<Nal>
 
-    @GET("api/Books\n")
+    @GET("api/Reader\n")
     suspend fun getBezNalMoney() : Response<BezNal>
 }

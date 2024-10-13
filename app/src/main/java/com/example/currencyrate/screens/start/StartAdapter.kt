@@ -27,9 +27,9 @@ class StartAdapter : RecyclerView.Adapter<StartAdapter.StartViewHolder>(){
     }
 
     override fun onBindViewHolder(holder: StartViewHolder, position: Int) {
-        holder.itemView.findViewById<TextView>(R.id.item_name).text = listStart[position].title
-        holder.itemView.findViewById<TextView>(R.id.item_buy).text = listStart[position].author
-        holder.itemView.findViewById<TextView>(R.id.item_sale).text = listStart[position].description
+        holder.itemView.findViewById<TextView>(R.id.item_name).text = listStart[position].firstName
+        holder.itemView.findViewById<TextView>(R.id.item_buy).text = listStart[position].lastName
+        holder.itemView.findViewById<TextView>(R.id.item_sale).text = listStart[position].contactDetails.toString()
     }
 
     @SuppressLint("NotifyDataSetChanged")
