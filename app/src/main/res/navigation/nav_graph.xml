@@ -3,30 +3,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/rootFragment">
+    app:startDestination="@id/startFragment">
 
     <fragment
-        android:id="@+id/rootFragment"
-        android:name="com.example.currencyrate.screens.root.RootFragment"
-        android:label="fragment_root"
-        tools:layout="@layout/fragment_root" />
-    <fragment
-        android:id="@+id/splashFragment"
-        android:name="com.example.currencyrate.screens.splash.SplashFragment"
-        android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" >
+        android:id="@+id/startFragment"
+        android:name="com.example.DataSyncApp.screens.start.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
         <action
-            android:id="@+id/action_splashFragment_to_rootFragment"
-            app:destination="@id/rootFragment" />
+            android:id="@+id/action_startFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
     </fragment>
     <fragment
-        android:id="@+id/startFragment"
-        android:name="com.example.currencyrate.screens.start.StartFragment"
-        android:label="fragment_start"
-        tools:layout="@layout/fragment_start" />
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.moviesapp.screens.favorite.FavoriteFragment"
+        android:label="FavoriteFragment" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/secondFragment"
-        android:name="com.example.currencyrate.screens.second.SecondFragment"
-        android:label="fragment_second"
-        tools:layout="@layout/fragment_second" />
+        android:id="@+id/detailFragment"
+        android:name="com.example.moviesapp.screens.detail.DetailFragment"
+        android:label="DetailFragment" >
+        <action
+            android:id="@+id/action_detailFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
 </navigation>
